@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root{
+  --green : #124240;
+}
+body {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(240, 233, 233);
+}
+
+.img-section img {
+  height: 25rem;
+  min-width: 24rem;
+}
+.discreption{
+  height: 25em;
+  width: 25em;
+
+ padding: 2rem;
+ box-sizing: border-box; 
+ background-color: #fff;
+}
+main{
+  height: 25em;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.discreption h1{
+  color: rgba(0, 0, 0, 0.6);
+}
+.discreption p{
+  color:rgba(0, 0, 0, 0.6); 
+}
+.discreption button{
+height: 4rem;
+width: 2rem;
+font-size: 2em;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap:2rem;
+border: var(--green);
+background-color: var(--green);
+color: #fff;
+transition: all 500ms ease-in;
+
+}
+.add-btn{
+  font-size: 1.8rem;
+}
+i{
+  font-size: 1.8rem;
+}
+svg{
+  height: 2rem;
+  width: 2rem;
+  color: #fff;
+  
+}
+
+@media (max-width: 740px) {
+  main{
+    display: flex;
+    flex-direction: column;
+    height: 38em;
+    width: 35em;
+    gap: 0%;
+    background-color : #fff;
+  }
+  .img-section img {
+   height: 18rem;
+    width: 35rem;
+    object-fit: cover;
+  }
+  .discreption h1{
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .discreption p{
+    color:rgba(0, 0, 0, 0.6); 
+  }
+  .discreption{
+    height: 20rem;
+    width: 35rem;
+    overflow: hidden;
+  
+   padding: 0 2rem 2rem 2rem ;
+   box-sizing: border-box; 
+   background-color: #fff;
+  }
+  .discreption button{
+    height: 4rem;
+    width: 28rem;
+    font-size: 8em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    border: var(--green);
+    background-color: var(--green);
+    color: #fff;
+    text-align: center;
+    }
+    .remove-btn{
+      display: block;
+    }
+
+}
+.remove-btn{
+  display: none;
+}
+.discreption button:hover{
+height: 4rem;
+width: 18rem;
+}
