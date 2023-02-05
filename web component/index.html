@@ -23,7 +23,7 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto porro officiis cupiditate corporis,
                 velit accusamus accusamus accusamus.</p>
             <button> <span class="add-btn remove-btn">Add to cart</span>
-                <i class="fa-sharp fa-solid fa-cart-plus remove-btn"></i>
+                <i class="fa-sharp fa-solid fa-cart-plus "></i>
             </button>
         </section>
     </main>
@@ -32,12 +32,14 @@
         const text = document.querySelector(".add-btn");
         const icon = document.querySelector(".fa-solid");
         Btn.addEventListener('mouseover', () => {
-            text.classList.remove("remove-btn");
-            icon.classList.remove("remove-btn");
+            setTimeout(function(){
+                text.classList.remove("remove-btn");
+                // icon.classList.remove("remove-btn"); 
+            },500)
         })
         Btn.addEventListener('mouseleave', () => {
             text.classList.add("remove-btn");
-            icon.classList.add("remove-btn");
+            // icon.classList.add("remove-btn");
         })
     </script>
 </body>
