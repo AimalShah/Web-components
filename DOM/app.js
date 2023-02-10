@@ -11,6 +11,7 @@ input.addEventListener('keyup', (event) => {
         const li = document.createElement("li");
         li.innerHTML=listItems;
         ul.appendChild(li);
+        input.value = "";
     }
 })
 addBtn.addEventListener('click', () => { 
@@ -19,4 +20,5 @@ addBtn.addEventListener('click', () => {
         const li = document.createElement("li");
         li.innerHTML=listItems;
         ul.appendChild(li);
+        input.value = "";
 })
