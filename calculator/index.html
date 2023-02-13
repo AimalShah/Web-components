@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <main>
+        <div class="display">
+            <input type="text" class="calc">
+        </div>
+
+        <div class="inputs">
+            <div>
+                <input type="button" value="AC" onclick="calc.value = ''">
+                <input type="button" value="DC" onclick="calc.value =  calc.value.toString().slice(0,-1)">
+                <input type="button" value="."  onclick="calc.value += '.' ">
+                <input type="button" value="/ " onclick="calc.value += '/' ">
+            </div>
+            <div>
+                <input type="button" value="1" onclick="calc.value += '1' ">
+                <input type="button" value="2" onclick="calc.value += '2' ">
+                <input type="button" value="3" onclick="calc.value += '3' ">
+                <input type="button" value="*" onclick="calc.value += '*' ">
+            </div>
+            <div>
+                <input type="button" value="4" onclick="calc.value += '4'">
+                <input type="button" value="5" onclick="calc.value += '5'">
+                <input type="button" value="6" onclick="calc.value += '6'">
+                <input type="button" value="-" onclick="calc.value += '-'">
+            </div>
+            <div>
+                <input type="button" value="7" onclick="calc.value += '7'">
+                <input type="button" value="8" onclick="calc.value += '8'">
+                <input type="button" value="9" onclick="calc.value += '9'">
+                <input type="button" value="+" onclick="calc.value += '+'">
+            </div>
+            <div>
+                <input type="button" value="0" onclick="calc.value += '0'">
+                <input type="button" value="00" onclick="calc.value += '00'">
+                <input type="button" value="=" onclick="calc.value = eval(calc.value)" class="equal">
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    let calc = document.querySelector(".calc");
+    console.log(calc);
+</script>
+</html>

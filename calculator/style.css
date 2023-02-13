@@ -1,0 +1,37 @@
+body{
+    background-color: #eef9ff;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+main{
+    height: 60vh;
+    width: 20vw;
+    /* outline: 2px solid red; */
+    border-radius: 10px;
+    background-color: #3a4452;
+    padding: 20px;
+}
+input{
+    width: 60px;
+    height: 60px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1) , 5px 5px 10px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #eef9ff;
+    font-size: 20px;
+    border-radius: 10px ;
+}
+.inputs div{
+    display: flex;
+    gap: 20px;
+    padding : 2px;
+}
+.equal{
+    width: 120px;
+}
+.calc{
+    box-shadow: none;
+    width: 100%;
+}
