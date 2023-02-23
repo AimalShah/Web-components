@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section class="img-section">
+            <img src="img.jpg" alt="">
+        </section>
+        <section class="discreption">
+            <h1>Perfume</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur .</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto porro officiis cupiditate corporis,
+                velit accusamus accusamus accusamus.</p>
+            <button> <span class="add-btn remove-btn">Add to cart</span>
+                <i class="fa-sharp fa-solid fa-cart-plus "></i>
+            </button>
+        </section>
+    </main>
+    <script>
+        const Btn = document.querySelector("button");
+        const text = document.querySelector(".add-btn");
+        const icon = document.querySelector(".fa-solid");
+        Btn.addEventListener('mouseover', () => {
+            setTimeout(function(){
+                text.classList.remove("remove-btn");
+                // icon.classList.remove("remove-btn"); 
+            },500)
+        })
+        Btn.addEventListener('mouseleave', () => {
+            text.classList.add("remove-btn");
+            // icon.classList.add("remove-btn");
+        })
+    </script>
+</body>
+
+</html>

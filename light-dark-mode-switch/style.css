@@ -1,0 +1,156 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,200;1,500;1,600&display=swap');
+  :root{
+    --red : rgb(248, 42, 20);
+    --primary : #edf2fc;
+    --seconday : #212121;
+  }
+  .dark-theme{
+    --primary : #212121;
+    --seconday : #edf2fc;
+  }
+  
+  *{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+body{
+    background-color: var(--primary);
+}
+.icons{
+    width: 30px;
+    cursor: pointer;
+}
+svg{
+    width: 40px;
+}
+header{
+    max-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+nav ul{
+    display: flex;
+    gap: 25px;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--seconday);
+}
+.logo{
+    color: var(--red) ;
+}
+.hero-img{
+    position: relative;
+}
+.bg{
+height: 433px;
+width: 705px;
+z-index: -2;
+transform: translateX(-10%);
+transition: all 0.9s ease-in;
+
+}
+img{
+    position: absolute;
+    transition: all 0.9s ease-in;
+}
+.hero{
+    display: flex;
+    /* justify-content: center; */
+    overflow: hidden;
+    height: 80vh;
+    padding: 6em;
+    gap: 4em;
+}
+.hero-para{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.name{
+    font-size: 3rem;
+    color: var(--seconday);
+}
+span{
+    color: rgb(248, 42, 20);
+}
+p{
+    color: var(--seconday)
+}
+.hero-img:is(:hover) .img{
+    transform: translateX(-1%);
+    transition: all 0.9s ease-in;
+}
+.hero-img:is(:hover) .bg{
+    transform: translateX(1%);
+    transition: all 0.9s ease-in;
+}
+button{
+    outline: 0;
+    border: 0cm;
+    height: 4em;
+    background-color: ;
+    color: var(--seconday);
+    width: 10%;
+    border: 2px solid var(--seconday);
+    border-radius: 15px;
+    margin: 25px 0px 0px 0px;
+    background: transparent;
+    font-size: 1.3rem;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+i{
+    font-size: 3rem;
+    margin: 1rem 0px;
+    padding: 0% !important;
+    transition: all 0.5s ease-in-out;
+}
+button:hover{
+    outline: 0;
+    border: 0cm;
+    height: 4em;
+    background-color: ;
+    color: var(--seconday);
+    width: 70%;
+    border: 2px solid var(--seconday);
+    border-radius: 15px;
+    margin: 25px 0px 0px 0px;
+    background: transparent;
+    font-size: 1.5rem;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+button:is(:hover) i{
+    font-size: 3rem;
+    margin: 1rem 3rem;
+    padding: 0% !important;
+    transition: all 0.5s ease-in-out;
+}
+@media (max-width : 1150px){
+    .hero{
+        flex-direction: column;
+    }
+    .hero-para{
+        width: 100%;
+    }
+    .hero-img
+    {
+        width: 100%;
+    }
+}
