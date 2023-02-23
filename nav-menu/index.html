@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curtin-menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body data-nav="true">
+    <main>
+        <H1>AWESOME NAV MENU</H1>
+    </main>
+    <nav>
+        <div class="nav-links">
+            <a href="#" class="nav-link">
+                <h2>HOME</h2>
+                <img src="https://images.unsplash.com/photo-1543248939-4296e1fea89b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80" alt="">
+            </a>
+            <a href="#" class="nav-link">
+                <h2>ABOUT</h2>
+                <img src="https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+            </a>
+            <a href="#" class="nav-link">
+                <h2>WORK</h2>
+                <img src="https://images.unsplash.com/photo-1535957998253-26ae1ef29506?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" alt="">
+            </a>
+            <a href="#" class="nav-link">
+                <h2>CONTACT</h2>
+                <img src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+            </a>
+        </div>
+    </nav>
+
+    <button type="button"  id="nav-btn" onclick="navToggle()"> 
+        <i class="fa-sharp fa-solid fa-bars-staggered" id="nav-icon"></i>
+        <i class="fa-solid fa-xmark " id="close"></i>
+    </button>
+</body>
+<script>
+    let nav = document.body.dataset.nav; 
+  function navToggle(){
+    document.body.dataset.nav = document.body.dataset.nav === "true" ? "false" : "true";
+  }
+  
+</script>
+</html>
