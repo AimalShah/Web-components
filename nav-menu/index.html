@@ -10,7 +10,29 @@
 </head>
 <body data-nav="true">
     <main>
-        <H1>AWESOME NAV MENU</H1>
+        <section class="gallary">
+                    <div class="photo">
+                        <img src="https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F2592x1646%2F358c61287b%2F4.jpg&w=1080&q=80" alt="">   
+                </div>
+        </section>
+        <section class="heading">
+            <div class="header-sec">
+                <h3>
+                    WEBWISE
+                </h3>
+            </div>
+            <div class="heading-sec">
+
+                <h1>WE BUILD
+                    DIGITAL
+                    FLAGSHIP
+                    STORES</h1>
+            </div>
+            <div class="about">
+                <p>We believe our industry is blinded by numbers. While buying decisions are based on emotion.</p>
+                <h3 class="about-us">ABOUT US</h3>
+            </div>
+        </section>
     </main>
     <nav>
         <div class="nav-links">
@@ -39,10 +61,16 @@
     </button>
 </body>
 <script>
-    let nav = document.body.dataset.nav; 
   function navToggle(){
     document.body.dataset.nav = document.body.dataset.nav === "true" ? "false" : "true";
   }
-  
+      let i = 0
+      let text = 'Developer'
+      let type = document.querySelector("#typed")
+      for(i=0; i<text.length;i++){
+        setInterval(() => {
+            type.innerHTML += text.charAt(i)
+        }, 500);
+      }
 </script>
 </html>
