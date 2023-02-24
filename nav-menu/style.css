@@ -35,6 +35,7 @@ body {
 }
 
 .nav-link {
+    font-size: clamp(1rem, 2.5vw, 2rem); 
     font-family: 'Rubik', sans-serif;
     color: #fff;
     text-decoration: none;
@@ -45,9 +46,9 @@ nav {
     width: 100vw;
     position: absolute;
     bottom: 0px;
-    overflow: hidden;
     transform: translatey(20%);
     z-index: -1;
+    overflow: auto;
 }
 
 main {
@@ -66,10 +67,7 @@ main {
 
 .gallary {
     min-width: 40vw;
-    display: grid;
-    grid-template-columns: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
+
 }
 
 .photo {
@@ -87,6 +85,7 @@ main {
 .heading {
     background-color: var(--white);
     min-height: 100vh;
+    
 }
 
 .header-sec {
@@ -94,29 +93,35 @@ main {
     text-align: right;
     margin: 2rem;
     font-family: 'Rubik', sans-serif;
+    font-size: clamp(1rem, 10vw, 2rem); 
+   
 }
 
 .heading-sec {
     height: 30%;
     font-size: 3em;
     width: 50%;
+   
     font-family: 'Rubik', sans-serif;
     transform: translateY(-50%);
     margin-left: 2rem;
+    font-size: clamp(1rem, 10vw, 2rem);  
+
 }
 
 .about {
     width: 50%;
     text-align: left;
-    font-size: 1.5em;
+    
     font-family: 'Rubik', sans-serif;
     transform: translateX(100%);
     margin-top: 2rem;
 }
 .about .about-us{
-    font-size: 2rem;
     margin-top: 20px;
     transition: all 500ms ease-in-out;
+    font-size: clamp(1rem, 10vw, 2rem); 
+
 }
 .about-us:hover{
     transform: translateX(10%);
@@ -126,8 +131,8 @@ main {
 }
 .about:hover .about-us::before{
     content: '';
-    height: 2rem;
-    width: 2rem;
+    height: 2vw;
+    width: 2vw;
     position: absolute;
     right: 105%;
     background-color: brown;
@@ -184,7 +189,14 @@ i {
     left: 35%;
     font-size: 1.2rem;
 }
-
+.nav-links i{
+    color : #fff;
+    position: absolute;
+    top: -16%;
+    right: -5%;
+    left: 94%;
+    font-size: 2rem;
+}
 body[data-nav="true"] #close {
     display: none;
     color: #fff;
@@ -209,4 +221,32 @@ body[data-nav="false"] main {
 
 body[data-nav="false"] .nav-links {
     transform: translateY(20%);
+}
+@media only screen and (max-width: 980px){
+ main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+   overflow: auto;
+ }
+ .gallary{
+    grid-row-start: 2 ;
+    grid-row-end: 2;
+    width: 100vw;
+ }
+ .photo{
+    width: 100vw;
+    height: 50vh;
+ }
+ .nav-links {
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+    padding: 0px 1rem;
+    transform: translateY(100%);
+    transition: transform 200ms ease-in-out;
+}
+.nav-link img{
+   height: 10rem;
+   width: 8rem;
+}
 }

@@ -34,9 +34,10 @@
             </div>
         </section>
     </main>
-    <nav>
-        <div class="nav-links">
-            <a href="#" class="nav-link">
+    <nav  >
+        <div class="nav-links" id="image-track" >
+            <div class="arrow"><i class="fa-sharp fa-solid fa-arrow-right" id="right-arrow"></i></div>
+            <a href="#" class="nav-link"  >
                 <h2>HOME</h2>
                 <img src="https://images.unsplash.com/photo-1543248939-4296e1fea89b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80" alt="">
             </a>
@@ -60,17 +61,7 @@
         <i class="fa-solid fa-xmark " id="close"></i>
     </button>
 </body>
-<script>
-  function navToggle(){
-    document.body.dataset.nav = document.body.dataset.nav === "true" ? "false" : "true";
-  }
-      let i = 0
-      let text = 'Developer'
-      let type = document.querySelector("#typed")
-      for(i=0; i<text.length;i++){
-        setInterval(() => {
-            type.innerHTML += text.charAt(i)
-        }, 500);
-      }
+<script src="app.js">
+    
 </script>
 </html>
