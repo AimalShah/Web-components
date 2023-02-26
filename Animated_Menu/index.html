@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button>Launch it</button>
+
+    <div class="overlay">
+
+        <a href="#" class="exit"><img src="photos/xmark-solid.svg" alt=""></a>
+
+        <div class="menu">
+                <div class="menu-container">
+                    <p class="category">Category</p>
+
+                    <ul>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                    </ul>
+                </div>
+                <div class="menu-container">
+                    <p class="category">Category</p>
+
+                    <ul>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                    </ul>
+                </div>
+                <div class="menu-container">
+                    <p class="category">Category</p>
+
+                    <ul>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                    </ul>
+                </div>
+                <div class="menu-container">
+                    <p class="category">Category</p>
+
+                    <ul>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                    </ul>
+                </div>
+                <div class="menu-container">
+                    <p class="category">Category</p>
+
+                    <ul>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                    </ul>
+                </div>
+                <div class="menu-container">
+                    <p class="category">Category</p>
+
+                    <ul>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                        <li><a href="#">A link can go here</a></li>
+                    </ul>
+                </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+                        integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+                        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/CSSRulePlugin.min.js"
+                        integrity="sha512-TJiE9joKYXjdf5nd0Kkzqt9QOYfp5Hk5W/PaeRmpOd7HYBVdSqpTxJezbfLzJnPrS7HGnalR54WO/hbppgDgkw=="
+                        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                        <script>
+                            const btn = document.querySelector('button');
+                            const overlay = document.querySelector('.overlay');
+                                const exit = document.querySelector('.exit');
+                                console.log(exit)
+
+                            var tl = gsap.timeline({defaults:{duration : 1 , ease: Back.easeOut.config(2)}})
+                            tl.paused(true);
+                            tl.to('.overlay',{clipPath : 'circle(100%)'})
+                            tl.to('.menu-container' , {opacity:1 , stagger : .4 , y : "-30px"} , "-=2")
+                            btn.addEventListener('click', () =>{
+                                console.log('clicked')
+                                tl.play();
+                            })
+                            exit.addEventListener('click' ,() =>{
+                                console.log('exit')
+                                tl.reverse(.5);
+                            })      
+</script>
+</body>
+
+</html>
